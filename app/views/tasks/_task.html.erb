@@ -1,0 +1,15 @@
+<div class="w-1/2">
+  <turbo-frame id="<%= dom_id task %>" class="flex items-center justify-between">
+    <div class="w-7/10">
+      <%= form_with(model: task, class:"text-lg inline-block my-3") do |form| %>
+        <%= form.check_box :completed, data: { id: task.id, action: "tasks#toggle" }, class: "mr-2 align-middle bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-5 w-5 rounded checked:bg-green-500" %>
+        <%= task.description %>
+      <% end %>
+    </div>
+  
+    <div class="w-3/10 flex justify-end">
+      <%= link_to "Edit", edit_task_path(task), class: "btn bg-gray-100 hover:bg-gray-200 py-2 px-4 rounded mr-2" %>
+      <%= button_to "Delete", task_path(task), method: :delete, data: { "turbo-frame": "_top" }, class: "btn bg-red-100 hover:bg-red-200 py-2 px-4 rounded" %>
+    </div>
+  </turbo-frame>
+</div>
