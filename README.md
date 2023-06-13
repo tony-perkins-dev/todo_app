@@ -1,24 +1,22 @@
-# README
+# ToDo App
+  This app is a solution to make a list of tasks and mark them completed
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Models
+  - Task
 
-Things you may want to cover:
+# Gems
+  - tailwindcss-rails
+  
+# System dependencies
+  - Rails 7.0.5
+  - Ruby 3.2.2
+  - Postgres
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Setup Instructions
+  - Clone the repo (git clone https://github.com/tony-perkins-dev/todo_app.git)
+  - Run bundle install
+  - Setup database
+    - rails db:create
+    - rails db:migrate
+  - start the server by running "foreman start -f Procfile.dev"
+  - Go to http://localhost:3000
